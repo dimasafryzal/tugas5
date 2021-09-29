@@ -1,0 +1,315 @@
+/* comment line */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+	margin: 0;
+	font-family: 'Inter', sans-serif;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.container {
+	width: 1200px;
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+	transition: .3s;
+}
+
+#header {
+	top: 0;
+	left: 0;
+	right: 0;
+	min-height: 40px;
+	z-index: 2;
+	background:gray;
+}
+
+#header .container .logo {
+	width: 70%;
+	display: flex;
+	float: left;
+}
+
+#header .container .logo img {
+	width: 40px;
+	object-fit: contain;
+}
+
+#header .container .logo .logo-title {
+	color:snow;
+	margin-left: 1rem;
+}
+
+#header .container .logo .menu-toggle {
+	display: none;
+	padding: .5rem 1rem;
+	font-weight: 500;
+	border-radius: 2rem;
+	background:black;
+	color: snow;
+	cursor: pointer;
+	margin: auto 0;
+	float: right;
+}
+
+#header .container #menu-hidden {
+	display: none;
+}
+
+#header .container .menu {
+	width: 30%;
+	margin: auto;
+	float: left;
+}
+
+#header .container .menu ul {
+	float: right; 
+	margin: auto;
+	
+}
+
+#header .container .menu ul li {
+	float: left; 
+	list-style: none;
+	padding: 0 1rem;
+}
+
+#header .container .menu ul li a {
+	font-size: 16px;
+	font-weight: 500;
+	color: white;
+	text-decoration: none;
+}
+
+#content {
+	width: 100%;
+	padding: 100px 0;
+}
+
+.sidebar {
+	float: left;
+	width: 30%;
+	padding-left: 1rem;
+}
+
+.sidebar .list-recomended .sidebar-title {
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+.sidebar .list-recomended {
+	width: 100%;
+	position: sticky;
+	top: 100px;
+}
+
+.sidebar .list-recomended .recomended {
+	width: 100%;
+	height: auto;
+	margin-bottom: 1rem;
+}
+
+.sidebar .list-recomended .recomended-image {
+	width: 16px;
+	height: auto;
+	margin-bottom: .5rem;
+}
+
+.sidebar .list-recomended .recomended-image img {
+	width: 100%;
+	object-fit: contain;
+}
+
+.sidebar .list-recomended .recomended-title {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: .2rem;
+}
+
+.sidebar .list-recomended .recomended-description {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+
+.list-article {
+	float: left;
+	width: 70%;
+	padding-right: 1rem;
+	
+}
+
+.article {
+	position: relative;
+	height: 400px;
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+#content .list-article .article .cover img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+#content .list-article .article .overlay {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#content .list-article .article .overlay img {
+	width: 100px;
+	height: 100px;
+}
+
+#content .list-article .article .overlay .article-title {
+	padding: 1rem
+}
+
+#content .list-article .article .overlay .article-title a {
+	text-decoration: none;
+	font-size: 24px;
+	color: white;
+	font-weight: 600;
+}
+
+#footer {
+	display: flex;
+	width: 100%;
+	padding: .5rem 0;
+	background:gray;
+}
+
+#footer .container {
+	flex-direction: row;
+}
+
+#footer .copyright {
+	width: 100%;
+	float: left;
+	color: white;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+#footer .contact {
+	width: 100%;
+	float: left;
+}
+
+#footer .contact a {
+	color: white;
+	font-size: 12px;
+	font-weight: 500;
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+
+	#content .container {
+		flex-direction: column;
+	}
+
+	#header .container .logo {
+		width: 50%;
+	}
+
+	#header .container #menu-hidden {
+		display: none;
+	}
+
+	#header .container .menu {
+		width: 50%;
+		
+	}
+
+	#header .container .logo .menu-toggle {
+		display: none;
+	}
+
+	.container {
+		width: 640px;
+	}
+	
+	.sidebar {
+		width: 100%;
+		padding: 0;
+		float: none;
+	}
+	
+	.list-article {
+		width: 100%;
+		float: none;
+		padding: 0;
+		margin-bottom: 1rem;
+	}
+	
+	.list{
+		width: 100%;
+		float: none
+	}
+}
+
+@media screen and (max-width: 640px) {
+
+	.container {
+		width: calc( 100% - 2rem );
+		flex-direction: column;
+	}
+
+	#header .container .logo {
+		width: 100%;
+	}
+
+	#header .container .menu {
+		display: none;
+		width: 100%;
+		margin: 0;
+		padding-bottom: .5rem;
+	}
+
+	#header .container .menu ul {
+		width: 100%;
+	}
+
+	#header .container .menu ul li{
+		width: 100%;
+		padding: .5rem 0;
+	}
+
+	#header .container .logo .menu-toggle {
+		display: inline;
+		margin-left: auto;
+	}
+	
+	.sidebar {
+		width: 100%;
+		padding: 0;
+		float: none;
+	}
+	
+	.list-article {
+		width: 100%;
+		float: none;
+		padding: 0;
+		margin-bottom: 1rem;
+	}
+
+	.article {
+		margin-bottom: 1rem;
+	}
+}
